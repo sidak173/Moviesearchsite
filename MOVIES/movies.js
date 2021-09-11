@@ -133,7 +133,6 @@ async function gettags() {
 gettags();
 
 const tagclear = () => {
-    clear.class
     const alltags = document.querySelectorAll('.tag')
     for (let t of alltags) {
         for (let s of selectgenres) {
