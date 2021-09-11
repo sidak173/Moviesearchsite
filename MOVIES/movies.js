@@ -283,7 +283,6 @@ document.querySelector('#popular').addEventListener('click', () => {
 document.querySelector('#Rating').addEventListener('click', () => {
     sortclear();
     search.value = ''
-    //?api_key=7b4fdab06810dcb18c525475eae2415f&language=en-US&page=1
     document.querySelector('#Rating').classList.add('selectedtag');
     sortby = 'vote_count.desc';
     getmovie(discoverurl)
@@ -300,7 +299,7 @@ document.querySelector('#revenue').addEventListener('click', () => {
     search.value = ''
     document.querySelector('#revenue').classList.add('selectedtag');
     sortby = 'revenue.desc';
-    console.log(sortby)
+//    console.log(sortby)
     getmovie(discoverurl)
 })
 
