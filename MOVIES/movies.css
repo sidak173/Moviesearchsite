@@ -1,0 +1,264 @@
+*{
+    margin: 0px;
+    font-family: 'Bree Serif', serif;
+}
+#head{
+    display: flex;
+    justify-content:space-between ;
+    padding: 0 1em;
+    padding-top:0.1em;
+    background:black;
+    color:white;
+
+}
+.siteheader{
+    font-weight: 900;
+    font-family: 'Permanent Marker', cursive;
+}
+::placeholder
+{
+    background-color: white;
+    color:black;
+    font-weight: 10;
+}
+body{
+    background-color: black;
+    color: aliceblue;
+}
+#search{
+    cursor: pointer;
+    background-color:aliceblue;
+    border-radius: 2em;
+    margin-top: 1.5em;
+    color: black;
+    padding: 0.6em 2em;
+    font-weight: 800;
+}
+#search:focus{
+    outline: 0;
+    box-shadow: 0em 0.1em 5px aqua;
+
+}
+#tags{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.tag{
+    margin-top: 0.3em;
+    border-radius: 2em;
+    border: 0.1em;
+    border-color: aqua;
+    padding: 0.4em 0.4em;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 130%;
+    cursor: pointer;
+}
+.tag:hover{
+    background-color: white;
+    color: black;
+    font-size:131%;
+    box-shadow: 0.01em 0.1em 5px aqua;
+
+}
+.selectedtag{
+    background-color:orange;
+    border-color: gold;
+    color:white;
+}
+.selectedtag:hover{
+    background-color:orange;
+    color:white;
+    font-size:131%;
+    box-shadow: 0.01em 0.1em 5px gold;
+
+}
+.movie{
+    position: relative;
+    max-width:31%;
+    background-color: aliceblue;
+    color: black;
+    margin-bottom: 2em;
+    overflow: hidden;
+}
+.desc{
+    overflow-y: scroll;
+}
+.movie img{
+    width: 100%;
+}
+.info{
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+      
+}
+.rating{
+    font-size: x-large;
+    font-weight: 800;
+    margin-left: 1em;
+    margin-top: 0.7em;
+}
+.green
+{
+    color: darkgreen;
+}
+.orange{
+    color:orange;
+}
+.red{
+    color: red;
+}
+.desc{
+    padding: 1rem;
+    position: absolute;
+    max-height: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  background-color: aliceblue;
+  transform: translateY(101%);
+  transition: transform 0.5s ease-in;
+}
+.movie:hover .desc{
+    transform: translateY(0);
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    margin-bottom: 0.3em;
+}
+.current{
+    font-weight: 800;
+    font-size: xx-large;
+    padding: 0em 1em;
+}
+.next{
+    cursor: pointer;
+    padding-top: 0.3em;
+}
+.pre{
+    cursor: pointer;
+    padding-top: 0.3em;
+}
+.pre:hover{
+    color:aqua;
+}
+.next:hover{
+    color:aqua;
+
+}
+
+.know-more{
+    border-radius: 1em;
+    margin-top: 0.2em;
+}
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  .carousel-inner{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+  }
+  .carousel-indicators{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      bottom: -1em;
+  }
+  .carousel-indicators li{
+      margin-right: 1em ;
+      margin-bottom: 1em;
+      margin-top: 1em;
+      width: 15px;
+      height: 15px;
+  }
+  .carousel-indicators .active{
+      margin-right:1em ;
+      width: 15px;
+      height: 15px;
+      margin-top: 1em;
+
+  }
+  #sortby{
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 1em;
+  }
+ .movbuttons{
+     display: flex;
+     justify-content: space-between;
+ }
+ .btn:focus,.btn:active {
+    outline: none !important;
+ }
+ .disable{
+     color:#818181;
+ }
+ .disable:hover{
+    color:#818181
+ }

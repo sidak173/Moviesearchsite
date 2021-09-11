@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="movies.css">
+
+    <title>Movies</title>
+</head>
+
+<body>
+    <div id="head">
+        <h3 class="siteheader">Movies</h1>
+            <form class="form-group">
+                <input type="text" placeholder="Search" id="search" class="form-control">
+            </form>
+    </div>
+    <div id="tags">
+    </div>
+    <div id="sortby">
+        <div class="tag" id="popular" accesskey="popularity.desc">Most Popular</div>
+        <div class="tag" id="Rating" accesskey="vote_count.desc">Highest Rated</div>
+        <span id="new">
+            <div class="clear tag">Clear</div>
+        </span>
+        <div class="tag" id="upcoming" accesskey="primary_release_date.desc">Upcoming</div>
+        <div class="tag" id="revenue" accesskey="revenue.desc">Highest Grossing</div>
+    </div>
+    <main>
+    </main>
+    <nav>
+        <span class="pre glyphicon glyphicon-arrow-left disable
+        ">
+        </span>
+        <span class="current"></span>
+        <span class="next glyphicon glyphicon-arrow-right">
+        </span>
+    </nav>
+    <div id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="myCarousel" class="carousel slide overlay-content" data-ride="carousel">
+            <!-- Indicators -->
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+            </div>
+
+            <ol class="carousel-indicators">
+            </ol>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </div>
+    <span onclick="openNav()"></span>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="movies.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
